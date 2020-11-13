@@ -1,0 +1,20 @@
+<p>add-project works!</p>
+
+<h3><i class="fa fa-align-center" aria-hidden="true">Enter Project details to store</i></h3> 
+            <div class="form" >
+               <form #addForm='ngForm' (ngSubmit)='addProject()'>
+            <div class="form-group">
+               <label for="id">Project Id</label>
+            <input type="number" name="id" id="id" [(ngModel)]='newproject.id' #id=ngModel class="form-control" placeholder="enter project id" aria-describedby="helpId" >
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" [(ngModel)]='newproject.title' #title=ngModel class="form-control" placeholder="enter project title" aria-describedby="helpId" > 
+            <label for="description">Description</label>
+             <input type="text" name="description" id="description" [(ngModel)]='newproject.description' #description=ngModel class="form-control" placeholder="enter description" aria-describedby="helpId" >
+             <label for="domain">Domain</label>
+             <input type="text" name="domain" id="domain" [(ngModel)]='newproject.domain' #domain=ngModel class="form-control" placeholder="enter domain" aria-describedby="helpId">
+             <button type="submit" class="btn btn-primary">Submit</button>
+           </div>
+           </form>
+           </div>
+           <a [routerLink]='"/list-project"'>click to list of projects</a><br>
+<a [routerLink]='"/add-project"'>click to add a new project</a>

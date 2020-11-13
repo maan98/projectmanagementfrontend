@@ -1,0 +1,12 @@
+<p>list-project works!</p>
+
+<table align="center">
+    <thead>
+        <tr><th>Project Id</th><th>Project Title</th><th>edit project</th><th>delete project</th></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let project of projects'><td>{{project.id}}</td><td>{{project.title}}</td><td  [routerLink]="['/update-project',project.id]">edit</td><td><button type="button" class="btn btn-link" (click)="deleteProject(project.id)">delete</button></td></tr>
+    </tbody>
+</table>
+<a [routerLink]='"/list-project"'>click to list of projects</a><br>
+<a [routerLink]='"/add-project"'>click to add a new project</a>
